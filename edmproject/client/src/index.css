@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Toast Customization */
+.Toastify__toast {
+  border-radius: 8px !important;
+  font-family: "Your-Font", sans-serif;
+}
+
+.Toastify__toast--success {
+  background: #4caf50 !important;
+}
+
+.Toastify__toast--error {
+  background: #f44336 !important;
+}
+
+.Toastify__toast--warning {
+  background: #ff9800 !important;
+}
+
+.Toastify__toast--info {
+  background: #2196f3 !important;
+}
+
+.Toastify__progress-bar {
+  height: 3px !important;
+}

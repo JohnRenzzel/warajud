@@ -1,0 +1,240 @@
+.login_container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.image1 {
+  width: 20%;
+  height: 50%;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 27%;
+}
+.image2 {
+  width: 20%;
+  height: 50%;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.login_form_container {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 20px 5px rgba(59, 177, 155, 0.5);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px 4px rgba(59, 177, 155, 0.5),
+      0 0 20px 5px rgba(59, 177, 155, 0.4),
+      0 0 30px 10px rgba(59, 177, 155, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px 10px rgba(59, 177, 155, 0.8),
+      0 0 30px 15px rgba(59, 177, 155, 0.7),
+      0 0 40px 20px rgba(59, 177, 155, 0.6);
+  }
+}
+
+.left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_container h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 370px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #edf5f3;
+  margin: 5px 0;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+/* Glowing effect on focus */
+.input:focus {
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Blue glow */
+  border-radius: 10px; /* Maintain rounded corners */
+}
+
+.error_msg {
+  width: 370px;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 14px;
+  background-color: #f34646;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3bb19b;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.right h1 {
+  margin-top: 0;
+  color: white;
+  font-size: 40px;
+  align-self: center;
+}
+
+.white_btn,
+.green_btn {
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  background-color: white;
+  border-radius: 20px;
+  width: 180px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.green_btn {
+  background-color: #3bb19b;
+  color: white;
+  margin: 10px;
+}
+
+/* Hover effect */
+.white_btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.green_btn:hover {
+  background-color: #33a68a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 950px) {
+  .image1,
+  .image2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .login_form_container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    flex: none;
+  }
+
+  .right {
+    border-radius: 0 0 10px 10px;
+    padding: 5% 0%;
+  }
+
+  .left {
+    border-radius: 10px 10px 0 0;
+    padding: 15% 0%;
+  }
+
+  /* .input {
+    width: 90%;
+  } */
+
+  .error_msg {
+    width: 90%;
+  }
+
+  .form_container h1,
+  .right h1 {
+    font-size: 24px;
+  }
+
+  /* Hide images on smaller screens */
+  .image1,
+  .image2 {
+    display: none;
+  }
+}
+
+/* Media query for screens smaller than 480px (typical mobile breakpoint) */
+@media screen and (max-width: 480px) {
+  .login_form_container {
+    width: 95%;
+  }
+
+  .input,
+  .error_msg {
+    width: 95%;
+  }
+
+  .white_btn,
+  .green_btn {
+    width: 150px;
+  }
+
+  .form_container h1,
+  .right h1 {
+    font-size: 20px;
+  }
+}
+
+/* Adjust the glow animation for smaller screens */
+@media screen and (max-width: 768px) {
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px 2px rgba(59, 177, 155, 0.5),
+        0 0 10px 3px rgba(59, 177, 155, 0.4),
+        0 0 15px 5px rgba(59, 177, 155, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 10px 5px rgba(59, 177, 155, 0.8),
+        0 0 15px 7px rgba(59, 177, 155, 0.7),
+        0 0 20px 10px rgba(59, 177, 155, 0.6);
+    }
+  }
+}
